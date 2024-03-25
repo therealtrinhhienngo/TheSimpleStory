@@ -3,13 +3,15 @@ const { mysqlConnection } = require("../config/MySQL_config");
 // CREATE users
 const createUser = async (req, res) => {
     try {
-        const { username, password, email, phoneNumber } = req.body;
+        const { id, username, password, email, phone_number } = req.body;
 
-        if (username != '' || password != '', email != '', phoneNumber != null) {
-            const addQuery = `INSERT INTO users (id, name, role) VALUES(
-                ${10},
-                '${hello}', 
-                ${20})`;
+        if (username != '' || password != '', email != '', phone_number != null) {
+            const addQuery = `INSERT INTO users (id, username, password, email, phone_number) VALUES(
+                '${id}',
+                '${username}', 
+                '${password}',
+                '${email}',
+                '${phone_number}')`;
             mysqlConnection.query(addQuery, function (err, result, fields) {
                 if (err) throw err;
                 res.send(result)
@@ -39,12 +41,44 @@ const readUser = async (req, res) => {
 
 // UPDATE users
 const updateUser = async (req, res) => {
+    try {
+        const { id, username, password, email, phone_number } = req.body;
 
+        if (username != '' || password != '', email != '', phone_number != null) {
+            const addQuery = `
+            UPDATE users 
+            SET
+                username = '${username}', 
+                password = '${password}',
+                email = '${email}',
+                phone_number = '${phone_number}'
+            WHERE id = '${id}'`;
+            mysqlConnection.query(addQuery, function (err, result, fields) {
+                if (err) throw err;
+                res.send(result)
+                console.log('Add Complete!');
+            });
+        }
+        else {
+
+        }
+    } catch (error) {
+        console.log('Error: ' + error);
+    }
 }
 
 // DELETE users
 const deleteUser = async (req, res) => {
-
+    try {
+        const {id} = req.body;
+        const selectQuery = `DELETE FROM users WHERE id = '${id}';`;
+        mysqlConnection.query(selectQuery, function (err, result, fields) {
+            if (err) throw err;
+            res.send(result);
+        });
+    } catch (error) {
+        console.log('Error: ' + error);
+    }
 }
 
 module.exports = { createUser, readUser, updateUser, deleteUser }

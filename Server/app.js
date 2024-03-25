@@ -9,6 +9,9 @@ var usersRouter = require('./routes/users');
 
 // Api router
 const usersApiRouter = require('./routes/api/user_api');
+const postApiRouter = require('./routes/api/post_api');
+const commentApiRouter = require('./routes/api/comment_api');
+const savedPostApiRouter = require('./routes/api/saved_post_api');
 
 // Web router
 
@@ -31,6 +34,9 @@ app.use('/users', usersRouter);
 
 // API
 app.use('/usersApi', usersApiRouter);
+app.use('/postApi', postApiRouter);
+app.use('/commentApi', commentApiRouter);
+app.use('/savedPostApi', savedPostApiRouter);
 
 // Web
 

@@ -10,7 +10,7 @@ const AuthButton = ({source, authFunction, backgroundStyle}) => {
         >
             <Image
                 source={source}
-                style={tailwind`h-20 w-20`}
+                style={tailwind `h-10 w-10`}
             />
         </TouchableOpacity>
     )

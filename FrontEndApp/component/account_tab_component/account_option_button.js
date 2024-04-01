@@ -6,7 +6,7 @@ const AccountOptionButton = ({icon, title, buttonFunction}) => {
   return (
     <TouchableOpacity
         style={tailwind `border-b border-slate-500 p-3 w-95 rounded-md mb-5`}
-        onPress={() => buttonFunction}
+        onPress={buttonFunction}
     >
         <View style={tailwind `flex-row items-center`}>
             {/* Icon */}

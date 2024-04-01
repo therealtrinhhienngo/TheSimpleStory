@@ -36,7 +36,12 @@ const LoginScreen = () => {
           <UserTextInput placeholder={'Password'} textController={handlePassword}/>
 
           {/* Button */}
-          <CustomButtom buttonName={'Login'} buttonFunction={() => loginFunction(navigation, inputUsername, inputPassword)} />
+          <CustomButtom 
+            buttonName={'Login'} 
+            buttonFunction={() => loginFunction(navigation, inputUsername, inputPassword)} 
+            backgroundStyle={'bg-slate-700 px-5 py-3 shadow-md rounded-md mt-3'}
+            textStyle={'text-white font-bold self-center'}
+          />
 
           {/* Options buttons */}
           <OptionsButton

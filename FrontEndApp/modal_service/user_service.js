@@ -10,7 +10,7 @@ const loginFunction = (navigation, username, password) => {
 
 // Register function
 const registerFunction = () => {
-
+    
 }
 
 module.exports = {loginFunction, registerFunction}

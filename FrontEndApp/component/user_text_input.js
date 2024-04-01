@@ -16,7 +16,7 @@ const UserTextInput = ({placeholder, textController}) => {
     <View>
         <TextInput
             placeholder={placeholder}
-            style={tailwind `border border-slate-500 w-80 rounded-md p-3 mb-5`}
+            style={tailwind `border border-slate-500 rounded-md p-3 mb-5 bg-white`}
             onChangeText={handleTextChange}
         />
     </View>

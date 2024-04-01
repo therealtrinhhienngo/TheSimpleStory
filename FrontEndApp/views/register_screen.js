@@ -11,9 +11,8 @@ import { useNavigation } from '@react-navigation/native'
 const RegisterScreen = () => {
   const navigation = useNavigation();
   return (
-    <View style={tailwind`items-center justify-center p-3`}>
-      <ScrollView>
-        <View style={tailwind `flex-1`}>
+    <View style={tailwind`items-center p-3`}>
+      <View style={tailwind ``}>
           {/* Login Banner */}
           <CustomTextBanner text={'Đăng Ký'} />
 
@@ -24,7 +23,12 @@ const RegisterScreen = () => {
           <UserTextInput placeholder={'Phone Number'} />
 
           {/* Button */}
-          <CustomButtom buttonName={'Register'} buttonFunction={() => { }} />
+          <CustomButtom 
+            buttonName={'Register'} 
+            buttonFunction={() => { }} 
+            backgroundStyle={'bg-slate-700 px-5 py-3 shadow-md rounded-md mt-3'}
+            textStyle={'text-white font-bold self-center'}
+          />
 
           {/* Options buttons */}
           <OptionsButton
@@ -35,7 +39,6 @@ const RegisterScreen = () => {
             }}
           />
         </View>
-      </ScrollView>
     </View>
   )
 }

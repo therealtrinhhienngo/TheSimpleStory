@@ -2,7 +2,11 @@ export const Routes = {
     LoginScreen: "login",
     RegisterScreen: "register",
     HomeScreen: "home",
-    UserScreen: "user"
+    UserScreen: "user",
+    SearchScreen: "search",
+    SearchResultScreen: "searchResult",
+    FriendshipScreen: "friendshipScreen",
+    SettingScreen: "settingScreen"
 };
 
 export const TabRoutes = {

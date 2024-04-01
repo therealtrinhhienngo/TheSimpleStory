@@ -3,8 +3,12 @@ import { Text, View } from 'react-native'
 import AccountOptionButton from '../../component/account_tab_component/account_option_button'
 import tailwind from 'twrnc'
 import AccountInfoButton from '../../component/account_tab_component/account_info_button'
+import { useNavigation } from '@react-navigation/native'
+import { Routes } from '../../config/routes_config'
 
 const AccountTab = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={tailwind `items-center p-5`}>
         {/* Account view */}
@@ -12,6 +16,7 @@ const AccountTab = () => {
           avatar={'https://i.pinimg.com/474x/e8/52/c2/e852c2a28f7753c7e7ac7b144a6750f0.jpg'}
           username={'Hello'}
           directionIcon={require('../../assets/arrows.png')}
+          buttonFunction={() => {navigation.navigate(Routes.UserScreen)}}
         />
 
         {/* Setting button */}

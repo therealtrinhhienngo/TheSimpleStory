@@ -2,10 +2,11 @@ import React from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 import tailwind from 'twrnc'
 
-const AccountInfoButton = ({ avatar, username, directionIcon }) => {
+const AccountInfoButton = ({ avatar, username, directionIcon, buttonFunction }) => {
     return (
         <TouchableOpacity
             style={tailwind`w-90 bg-slate-300 p-4 rounded-md mb-4`}
+            onPress={buttonFunction}
         >
             <View style={tailwind`flex-row items-center`}>
                 {/* User Avatar */}

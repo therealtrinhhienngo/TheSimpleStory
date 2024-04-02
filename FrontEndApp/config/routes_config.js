@@ -6,7 +6,9 @@ export const Routes = {
     SearchScreen: "search",
     SearchResultScreen: "searchResult",
     FriendshipScreen: "friendshipScreen",
-    SettingScreen: "settingScreen"
+    SettingScreen: "settingScreen",
+    PostManagementScreen: "postManagementScreen",
+    PostFormScreen: "postFormScreen"
 };
 
 export const TabRoutes = {

@@ -23,6 +23,12 @@ const AccountTab = () => {
       {/* Setting button */}
       <View>
         <AccountOptionButton
+          buttonFunction={() => { navigation.navigate(Routes.PostManagementScreen) }}
+          icon={require('../../assets/post.png')}
+          title={'Quản lý bài đăng'}
+        />
+
+        <AccountOptionButton
           buttonFunction={() => { navigation.navigate(Routes.FriendshipScreen) }}
           icon={require('../../assets/friendship.png')}
           title={'Bạn bè'}
@@ -38,8 +44,8 @@ const AccountTab = () => {
       {/* Logout buttons */}
       <CustomButtom
         buttonName={'Đăng Xuất'}
-        buttonFunction={() => {navigation.navigate(Routes.LoginScreen)}}
-        backgroundStyle={'border border-slate-700 w-95 p-5 rounded-md mt-90'}
+        buttonFunction={() => { navigation.navigate(Routes.LoginScreen) }}
+        backgroundStyle={'border border-slate-700 w-95 p-5 rounded-md mt-70'}
         textStyle={'self-center text-black'}
       />
     </View>

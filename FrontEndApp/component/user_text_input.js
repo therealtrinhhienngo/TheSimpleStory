@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { TextInput, View } from 'react-native'
 import tailwind from 'twrnc'
 
-const UserTextInput = ({placeholder, textController}) => {
+const UserTextInput = ({ placeholder, textController, keyboardType }) => {
   const [text, setText] = useState('');
 
   const handleTextChange = newText => {
@@ -12,13 +12,15 @@ const UserTextInput = ({placeholder, textController}) => {
       textController(newText);
     }
   };
+
   return (
     <View>
-        <TextInput
-            placeholder={placeholder}
-            style={tailwind `border border-slate-500 rounded-md p-3 mb-5 bg-white`}
-            onChangeText={handleTextChange}
-        />
+      <TextInput
+        placeholder={placeholder}
+        style={tailwind`border border-slate-500 rounded-md p-3 mb-5 bg-white`}
+        onChangeText={handleTextChange}
+        keyboardType={keyboardType}
+      />
     </View>
   )
 }

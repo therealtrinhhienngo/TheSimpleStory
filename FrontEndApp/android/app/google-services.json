@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "290366675598",
+    "project_id": "upload-file-demo-f256d",
+    "storage_bucket": "upload-file-demo-f256d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:290366675598:android:5c8bce3d251b2ae7b607df",
+        "android_client_info": {
+          "package_name": "com.example.picture_picker_module"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBRos1a1wCRkXcOG9nGYIxXKZaVZT8UhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

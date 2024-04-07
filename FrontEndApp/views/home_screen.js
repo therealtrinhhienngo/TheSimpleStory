@@ -1,13 +1,14 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
-import { NavigationContainer, useNavigation } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 import tailwind from 'twrnc'
 import CustomTabar from '../component/custom_tabbbar'
 import { Routes, TabRoutes } from '../config/routes_config'
+import AccountTab from './MainTabbar/account_tab'
 import HomeTab from './MainTabbar/home_tab'
 import NotificationTab from './MainTabbar/notification_tab'
-import AccountTab from './MainTabbar/account_tab'
+
 
 const HomeScreen = () => {
   const Tab = createMaterialTopTabNavigator();
@@ -21,7 +22,7 @@ const HomeScreen = () => {
 
         <TouchableOpacity
           style={tailwind`shadow-md bg-white w-10 h-10 items-center justify-center p-5 rounded-full items-center ml-40`}
-          onPress={() => {navigation.navigate(Routes.SearchScreen)}}
+          onPress={() => { navigation.navigate(Routes.SearchScreen) }}
         >
           <Image
             source={require('../assets/search_icon.png')}
